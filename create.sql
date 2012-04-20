@@ -1,21 +1,9 @@
 CREATE OR REPLACE TYPE o_gr01_person AS OBJECT (
   name varchar2(30),
-  vorname varchar2(20),
-  constructor function o_gr01_person(name varchar2, vorname varchar2) return self as result
+  vorname varchar2(20)
 )
 NOT FINAL;
 /
-
-create type body o_gr01_person as
-  constructor function o_gr01_person(name varchar2, vorname varchar2) return self as result is 
-  begin
-    self.name = name;
-    self.vorname = vorname;
-    return;
-  end;
-end;
-/
-
 
 CREATE OR REPLACE TYPE o_gr01_buch AS OBJECT (
   isbn varchar2(20),
