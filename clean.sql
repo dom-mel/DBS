@@ -1,3 +1,6 @@
+DROP VIEW s_gr01_1kPlusPages;
+DROP VIEW s_gr01_voe;
+
 DROP TABLE t_gr01_buecher;
 DROP TABLE t_gr01_autorinnen;
 

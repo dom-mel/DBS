@@ -39,3 +39,10 @@ CREATE TABLE t_gr01_buecher OF o_gr01_buch(
   PRIMARY KEY (isbn)
 );
 /
+
+-- VIEWS
+
+CREATE VIEW s_gr01_voe OF o_gr01_voe
+WITH OBJECT IDENTIFIER (isbn, position) AS
+SELECT o_gr01_voe(v.position, v.isbn)
+FROM t_gr01_autorinnen k, TABLE(k.voe) V;
