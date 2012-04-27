@@ -1,6 +1,17 @@
+CREATE OR REPLACE TYPE o_gr01_voe AS object (
+  position number(2),
+  isbn varchar2(20)
+) NOT FINAL;
+/
+
+CREATE TYPE nt_gr01_voe AS TABLE OF o_gr01_voe;
+/
+
+
 CREATE OR REPLACE TYPE o_gr01_person AS OBJECT (
   name varchar2(30),
-  vorname varchar2(20)
+  vorname varchar2(20),
+  voe nt_gr01_voe
 )
 NOT FINAL;
 /
@@ -20,13 +31,11 @@ CREATE OR REPLACE TYPE o_gr01_buch AS OBJECT (
 ) NOT FINAL;
 /
 
-CREATE OR REPLACE TYPE o_gr01_veroeffentlichungen AS OBJECT (
-  position number(2),
-  buch ref o_gr01_buch,
-  autorin ref o_gr01_person
-) NOT FINAL;
+CREATE TABLE t_gr01_autorinnen OF o_gr01_person (
+  PRIMARY KEY(name, vorname)
+) NESTED TABLE voe STORE AS t_gr01_voe;
 /
-
-CREATE TABLE t_gr01_autorinnen OF o_gr01_person;
-CREATE TABLE t_gr01_buecher OF o_gr01_buch;
-CREATE TABLE t_gr01_veroeffentlichungen OF o_gr01_veroeffentlichungen;
+CREATE TABLE t_gr01_buecher OF o_gr01_buch(
+  PRIMARY KEY (isbn)
+);
+/
