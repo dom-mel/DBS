@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<lehrhefte_dbs>
+	<lehrheft>
+		<titel nr="dbs7-2009">Objektrelationale Datenbanken</titel>
+		<autor>
+			<familienname>Witt</familienname>
+			<vorname>Kurt</vorname>
+			<vorname>Ulrich</vorname>
+		</autor>
+		<preis>9.99</preis>
+		<datum>01.01.2009</datum>
+		<auflage_nr>1</auflage_nr>
+	</lehrheft>
+	<lehrheft>
+		<titel nr="dbs6-2008">Datenbanksystemtechnik</titel>
+		<autor>
+			<familienname>Vossen</familienname>
+			<vorname>Gottfried</vorname>
+		</autor>
+		<preis>9.99</preis>
+		<datum>01.12.2008</datum>
+		<auflage_nr>1</auflage_nr>
+	</lehrheft>
+	<lehrheft>
+		<titel nr="dbs3-2010">Die Datenbanksprache SQL</titel>
+		<autor>
+			<familienname>Hartmann</familienname>
+			<vorname>Uwe</vorname>
+		</autor>
+		<autor>
+			<familienname>Vossen</familienname>
+			<vorname>Gottfried</vorname>
+		</autor>
+		<preis>19.99</preis>
+		<datum>01.01.2010</datum>
+		<auflage_nr>2</auflage_nr>
+	</lehrheft>
+	<lehrheft>
+		<titel nr="dbs3-2003">Die Datenbanksprache SQL</titel>
+		<autor>
+			<familienname>Hartmann</familienname>
+			<vorname>Uwe</vorname>
+		</autor>
+		<preis>19.99</preis>
+		<datum>01.10.2003</datum>
+		<auflage_nr>1</auflage_nr>
+	</lehrheft>
+	<lehrheft>
+		<titel>XML und Datenbanken</titel>
+		<autor>
+			<familienname>Sauer</familienname>
+			<vorname>Petra</vorname>
+		</autor>
+		<preis>10.99</preis>
+		<datum>01.01.2010</datum>
+		<auflage_nr>1</auflage_nr>
+	</lehrheft>
+	<lehrheft>
+		<titel>XML</titel>
+		<autor>
+			<familienname>Sauer</familienname>
+			<vorname> </vorname>
+		</autor>
+		<preis>13.95</preis>
+		<datum>01.01.2011</datum>
+		<auflage_nr>1</auflage_nr>
+	</lehrheft>
+</lehrhefte_dbs>

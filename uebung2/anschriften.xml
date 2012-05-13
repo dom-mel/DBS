@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+<anschriften>
+ <anschrift>
+  <name>Hartmann</name> 
+  <vorname>Andreas</vorname> 
+  </anschrift>
+ <anschrift>
+  <name>Vossen</name> 
+  <vorname>Gottfried</vorname> 
+  <stadt>Münster</stadt> 
+  </anschrift>
+ <anschrift>
+  <name>Witt</name> 
+  <vorname>Kurt-Ulrich</vorname> 
+  <stadt>Bonn</stadt> 
+  <stadt>Trier</stadt> 
+  </anschrift>
+ <anschrift>
+  <name>Sauer</name> 
+  <vorname>Petra</vorname> 
+  <stadt>Berlin</stadt> 
+  </anschrift>
+ <anschrift>
+  <name>Meier</name> 
+  <vorname>Peter</vorname> 
+  <stadt>Wien</stadt> 
+ </anschrift>
+ <anschrift>
+  <name>Meier</name> 
+  <vorname>Hans</vorname> 
+  <stadt>Berlin</stadt> 
+ </anschrift>
+</anschriften>
