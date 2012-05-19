@@ -1,3 +1,10 @@
+/*
+  *** Selbstgestellte Aufgabe ***
+  Aufgabenstellung: 
+  Alle Artikel sollen in einer XML Liste angezeigt werden. Die Artikelnummer soll ein Attribut sein.
+  Bezeichnung, Einkaufs- und Verkaufspreis sollen als Kindelemente dargestellt werden. Die XML Präambel
+  soll angezeigt werden. Zusätzlich soll die Liste wenigstens einen XML Kommentar beinhalten.
+*/
 select 
   XMLROOT(
       XMLAGG(
