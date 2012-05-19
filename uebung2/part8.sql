@@ -1,10 +1,11 @@
 
 SELECT
   gru.grup_txt,
-  sum(st.bestand) as s1,
-  sum(st.ekpreis * st.bestand) as s2
+  st.bestand as s1,
+  st.ekpreis * st.bestand as s2
 FROM matinf.artgru gru
 JOIN matinf.artst st ON gru.gruppe = st.gruppe
+
 --group by gru.gruppe
 /*SELECT
   XMLAGG(
