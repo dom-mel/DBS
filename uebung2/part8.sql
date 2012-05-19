@@ -1,24 +1,21 @@
 
 SELECT
-  gru.grup_txt,
-  st.bestand as s1,
-  st.ekpreis * st.bestand as s2
+  XMLROOT(
+    XMLELEMENT(
+      "MATINF",
+      XMLAGG(
+        XMLELEMENT(
+          "ARTIKELGRUPPE",
+          XMLATTRIBUTES(
+            sum(st.bestand) as ANZAHL_ARTIKEL,
+            sum(st.ekpreis * st.bestand) as SUM_EKPREIS,
+            gru.grup_txt
+          )
+        )
+      )
+    ), VERSION '1.0', STANDALONE YES
+  )
+  as "result"
 FROM matinf.artgru gru
 JOIN matinf.artst st ON gru.gruppe = st.gruppe
-
---group by gru.gruppe
-/*SELECT
-  XMLAGG(
-    XMLELEMENT(
-      "ARTIKELGRUPPE",
-      XMLATTRIBUTES(
-        ... as ANZAHL_ARTIKEL,
-        ... as SUM_EKPREIS
-        gru.grup_txt
-      )
-    )
-  )
-FROM matinf.artgru gru
-JOIN matinf.artst st ON gru.gruppe = artst.gruppe
-GROUP BY st.gruppe
-*/
+GROUP BY gru.grup_txt
